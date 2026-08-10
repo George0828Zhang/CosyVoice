@@ -70,7 +70,7 @@ def _remote_reward(tokens: List[int], ground_truth: str, timeout: float = 200.0)
         headers={"Content-Type": "application/json"},
         json=payload,
         timeout=timeout,
-        verify=False,
+        verify=True,
         params={"request_id": "0"},
     )
     rsp.raise_for_status()
