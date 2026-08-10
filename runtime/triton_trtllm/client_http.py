@@ -160,7 +160,8 @@ if __name__ == "__main__":
         url,
         headers={"Content-Type": "application/json"},
         json=data,
-        verify=False,
+        verify=True,
+        timeout=300,
         params={"request_id": '0'}
     )
     result = rsp.json()
